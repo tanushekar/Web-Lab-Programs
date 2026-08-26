@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JSS STU</title>
+        <link rel="stylesheet" href="styles.css">
+
+        <style>
+            .about, .programs, .contact {
+                text-align:center;
+            }
+
+            .about{
+                background-color: lightgrey;
+            }
+            .programs{
+                background-color: white;
+            }
+            .program-list{
+                display:flex;
+                justify-content: center;
+                gap:20px;
+                flex-wrap: wrap;
+            }
+            .program{
+                background-color: lightblue;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+                width: 240px;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <nav class="navbar">
+            <div class="logo">JSSSTU</div>
+            <ul class="nav-links">
+                <li> <a href="#home">Home</a></li>
+                <li> <a href="#about">About Us</a></li>
+                <li> <a href="#programs">Programs</a></li>
+                <li> <a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <header class="hero">
+            <h1>JSS Science and Tech University</h1>
+            <h3 style="color:purple;">Shaping future with Science and Tech!</h3>
+            <img src="../logo.png" alt="JSS Logo" height="150" width="200">
+
+            <section class="about">
+                <h2>About Us</h2>
+                <p>JSS STU is a located in Mysore and ranked No.1 in the city.</p>
+                <p>Known for it's green campus and excellent facilities!</p>
+            </section>
+        </header>
+
+        <section class="programs">
+            <h2>OUR PROGRAMS</h2>
+            <div class="program-list">
+                <div class="program">
+                    <h3>B.tech</h3>
+                    <p>UG in CSE, ECE, MECH</p>
+                </div>
+
+                <div class="program">
+                    <h3>M.tech</h3>
+                    <p>Post grad programs</p>
+                </div>
+
+                <div class="program">
+                    <h3>Ph.D</h3>
+                    <p>Doctoral research programs</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact">
+            <h2>Contact Us</h2>
+            <p>Email: info@jssstu.edu.in</p>
+            <p>Phone: +91 1234567890</p>
+            <p>Address: JSSSTU, Mys, Karnataka, India</p>
+        </section>
+
+        <footer>
+            <p>
+                &copy; 2026 JSSSSTU. All rights reserved.
+            </p>
+        </footer>
+    </body>
+</html>
