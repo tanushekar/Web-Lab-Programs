@@ -1,0 +1,90 @@
+body{
+    font-family: sans-serif;
+    background: lightblue;
+    margin: 0;
+    padding: 20px;
+    color: darkolivegreen;
+}
+
+.header{
+    text-align: center;
+    background: darkblue;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+section{
+    background: floralwhite;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4)
+
+}
+
+/*font styles*/
+
+.serif{
+    font-family: serif;
+}
+.sans{
+    font-family: sans-serif;
+}
+.mono{
+    font-family: monospace;
+}
+.cursive{
+    font-family: cursive;
+}
+.fantasy{
+    font-family: fantasy;
+}
+
+/*bg repeat*/
+
+.bg{
+    height: 300px;
+    border: 2px solid brown;
+}
+
+.repeat{
+    background: url('../images/profile.jpg') repeat;
+        background-size: 100px 80px;
+
+}
+
+.no-repeat{
+    background: url('../images/profile.jpg') no-repeat;
+        background-size: 150px 220px;
+
+}
+
+/*link styles*/
+
+a{
+    font-weight: bold;
+    color:blue;
+    text-decoration: none;
+}
+
+a:visited{
+    color: purple;
+}
+
+a:hover {
+    color: green;
+    text-decoration: underline;
+}
+
+a:active{
+    color:red;
+}
+
+/*visibility*/
+
+.visible{
+    visibility: visible;
+}
+
+.hidden{
+    visibility: hidden;
+}
