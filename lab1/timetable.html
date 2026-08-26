@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Time Table</title>
+        <style>
+            body{
+                font-family:sans-serif;
+            }
+
+            img{
+                height: 100px;
+                max-width: 200px;
+            }
+
+            h1{
+                color: grey;
+            }
+            table{
+                border-collapse: collapse;
+            }
+            td{
+                text-align:center;
+            }
+
+            .flex{
+                display:flex;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header class="flex">
+            <img src="..\logo.png" alt="Logo">
+            <div>
+                <h1>CLASS TIMETABLE</h1>
+                <h2>JSS Science and Technology University, Mysore</h2>
+            </div>
+        </header>
+
+        <main>
+            <table border="1" align="center" width="80%" cellpadding="10">
+                <tr bgcolor="lightblue">
+                    <th>Time/Day</th>
+                    <th>9:00-10:00</th>
+                    <th>10:00-11:00</th>
+                    <th>11:00-12:00</th>
+                    <th>12:00-1:00</th>
+                    <th>1:00-2:00</th>
+                    <th>2:00-3:00</th>
+                    <th>3:00-4:00</th>
+                </tr>
+
+                <tr>
+                    <td>Monday</td>
+                    <td>CS201</td>
+                    <td>MA202</td>
+                    <td>CS204</td>
+                    <td rowspan="6">Lunch Break</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+
+                </tr>
+
+                <tr>
+                    <td>Tuesday</td>
+                    <td>CS203</td>
+                    <td>MA201</td>
+                    <td>CS202</td>
+                    <td>CT663</td>
+                    <td>CS205</td>
+                </tr>
+
+                <tr>
+                    <td>Wednesday</td>
+                    <td></td>
+                    <td></td>
+                    <td>CS204</td>
+                    <td colspan="3">Java Lab</td>
+                     
+                </tr>
+
+                <tr>
+                    <td>Thursday</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>MA201</td>
+                    <td>CS205</td>
+                    <td>CS102</td> 
+                </tr>
+
+                <tr>
+                    <td>Friday</td>
+                    <td colspan="3">HW Lab</td>
+                    <td>MA201</td>
+                    <td>CS205</td>
+                    <td>CS102</td> 
+                </tr>
+
+                <tr>
+                    <td>Saturday</td>
+                    <td>MA201</td>
+                    <td>CS205</td>
+                    <td>CS102</td> 
+                </tr>
+            </table>
+        
+            <h2 align="center"><u>Course Info</u></h2>
+        
+                <table border="1" align="center" width="40%" cellpadding="5">
+                    <tr bgcolor="lightblue">
+                        <th>Course Code</th>
+                        <th>Course Title</th>
+                        <th>Credits</th>
+                        <th>Faculty</th>
+                    </tr>
+
+
+                    <tr>
+                        <td>CS201</td>
+                        <td>Machine Learning</td>
+                        <td>4</td>
+                        <td>Rakshitha R</td>
+                    </tr>
+
+                    <tr>
+                        <td>CS202</td>
+                        <td>IOT</td>
+                        <td>3</td>
+                        <td>Shwethashree G C</td>
+                    </tr>
+
+                    <tr>
+                        <td>CS203</td>
+                        <td>Web Tech</td>
+                        <td>3</td>
+                        <td>Chetan B K</td>
+                    </tr>
+
+                    <tr>
+                        <td>CS204</td>
+                        <td>Java</td>
+                        <td>2</td>
+                        <td>Suhas S</td>
+                    </tr>
+
+                    <tr>
+                        <td>HW22L</td>
+                        <td>Hardware lab</td>
+                        <td>1</td>
+                        <td>Shwetha</td>
+                    </tr>
+
+                    <tr>
+                        <td>CS22L</td>
+                        <td>Java Lab</td>
+                        <td>1</td>
+                        <td>Suhas S</td>
+                    </tr>
+                </table>
+        </main>
+
+        <footer class="flex">
+            <div>
+                <h4>Dr.Anilkumar K M</h4>
+                <p>HOD, Dept. of CSE</p>
+            </div>
+            <div>
+                <h4>Dr.C Nataraju</h4>
+                <p>Principal, SJCE</p>
+            </div>
+        </footer>
+
+    </body>
+</html>
