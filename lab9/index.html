@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration validation</title>
+
+        <style>
+            body{
+                background: floralwhite;
+                text-align: center;
+            }
+            h2{
+                color: darkblue;
+            }
+            form{
+                background: white;
+                display: inline-block;
+                padding: 20px;
+
+            }
+
+            input[type="text"], input[type="password"] {
+                padding: 8px;
+                margin: 8px;
+            }
+
+            input[type="button"] {
+                background: lightblue;
+                color: black;
+                margin: 20px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h2>User Registration</h2>
+        <form action="#">
+            <input type="text" id="uid" placeholder="User ID" /> <br>
+            <input type="text" id="name" placeholder="Name"> <br>
+            <input type="password" id="pwd" placeholder="Password" /> <br>
+            <input type="text" id="email" placeholder="Email" /> <br>
+
+            <input type="button" value="Register" onclick="validate()" />
+            <input type="reset" value="reset"/>
+
+        </form>
+
+        <script>
+          function validate(){
+            var uid= document.getElementById("uid").value
+            var name=document.getElementById("name").value
+            var pwd= document.getElementById("pwd").value
+            var email= document.getElementById("email").value
+            
+            if(uid=="" || pwd=="" || name=="" || email==""){
+                alert("Pls fill all fields!")
+                return false
+            }
+
+            if (uid.length<5 || uid.length>12) {
+                alert("User ID must be 5-12 char!")
+                return false
+            }
+
+            if (!/^[A-Za-z ]{5,}$/.test(name)) {                                 
+                alert("Name must be only alphabets atleast 5 char!")
+                return false
+            }
+
+            if (! /^(?=.*[A-Z])(?=.*[!@#$%^&*])(?=.*[a-zA-Z0-9]).{8}$/.test(pwd)) {
+                alert("Password must be atleast 8 char with: 1 capital, 1 special and 1 alphanumeric char!")
+                return false
+            }
+
+            if (! /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                alert("Invalid Email!")
+                return false
+            }
+            alert("Registration Successful")
+            return true
+        }
+        </script>
+    </body>
+    
+
+    
+</html>
