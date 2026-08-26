@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Student Feedback form</title>
+        <style>
+            body{
+                font-family: sans-serif;
+                background: lightgrey;
+            }
+            .form-container{
+                background: white;
+                margin: auto;            
+                max-width: 500px;
+                padding: 10px;
+                border-radius: 5px;
+            }
+            
+        </style>
+    </head>
+
+    <body>
+        <h1 style="text-align: center; color: darkblue">Student Feedback Form</h1>
+
+        <div class="form-container"><form action="#">
+            <label>FULL NAME: </label>
+            <input type="text" id="name">
+            <br>
+            <br>
+            <br>
+
+            <label>EMAIL:</label>
+            <input type="text" id="email">
+            <br>
+            <br>
+            <br>
+
+            <label>GENDER: </label>
+            <br>
+            <br>
+            <input type="radio" name="gender" id="male">
+            <label>Male</label>
+
+            <input type="radio" name="gender" id="female">
+            <label>Female</label>
+
+            <br>
+            <br>
+            <br>
+            <label style="font-weight:bold;">Select Course:</label>
+            <br>
+            <br>
+            <select name="course" id="course" style="width:200px">
+                <option value="be">B.E</option>
+                <option value="btech">B.tech</option>
+                <option value="mtech">M.tech</option>
+                <option value="mba">MBA</option>
+                <option value="msc">M.Sc</option>
+            </select>
+
+            <br>
+            <br>
+            <label style="font-weight:bold;">Facilities you liked!</label>
+            <br>
+            <br>
+            <input type="checkbox">labs
+            
+
+            <input type="checkbox">
+            <label>Library</label>
+
+            <input type="checkbox">
+            <label>Sports</label>
+
+            <input type="checkbox">
+            <label>Canteen</label>
+
+            <br>
+            <br>
+            <label style="font-weight:bold; color:brown">Additional Comments</label>
+            <br>
+            <br>
+            <textarea rows="5" style="width:80%"></textarea>
+            <br>
+            <br>
+            <input type="submit" value="submit">
+        </form></div>
+    </body>
+</html>
