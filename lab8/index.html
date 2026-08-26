@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title>Test Marks Avg</title>
+        <style>
+            body{
+                font-family: Arial, sans-serif;
+                background: floralwhite;
+                padding: 30px;
+                text-align: center;
+            }
+            form{
+                background: white;
+                padding: 20px;
+                display: inline-block;
+
+            }
+            label{
+                margin: 10px;
+                display: block;
+            }
+            input[type="text"] {
+                padding: 5px;
+                border: 1px solid tomato;
+            }
+            input[type="button"]{
+                width: 40%;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h2>Student Test Marks</h2>
+        <form action="#">
+            <label>Register No: <input type="text" id="reg">
+            </label>
+
+            <label>Sub code: <input type="text" id="sub">
+            </label>
+
+            <label>Test-1: <input type="text" id="t1">
+            </label>
+
+            <label>Test-2: <input type="text" id="t2">
+            </label>
+
+            <label>Test-3: <input type="text" id="t3">
+            </label>
+
+            <input type="button" onclick="calcAvg()">       
+
+        <script>
+            function calcAvg() {
+                var reg= document.getElementById("reg").value;
+                var sub= document.getElementById("sub").value;
+
+                var t1= parseFloat(document.getElementById("t1").value);
+                var t2= parseFloat(document.getElementById("t2").value);
+                var t3= parseFloat(document.getElementById("t3").value);
+
+                if(reg=="" || sub=="" || isNaN(t1) || isNaN(t2) || isNaN(t3)) {
+                    alert("Please fill all fields correctly!");
+                    return;
+                }
+
+                var scores= [t1, t2, t3];
+                scores.sort(function(a, b) {
+                    return b-a;
+                });                            /*  );  !!!! */
+
+                var avg= (scores[0]+scores[1]) /2;
+
+                /*AVG OUTPUT*/
+                alert("Average of best 2 tests: "+ avg)
+            }
+        </script>
+    </body>
+</html>
