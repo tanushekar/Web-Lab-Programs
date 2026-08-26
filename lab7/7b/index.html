@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Student Info Form</title>
+        <style>
+            body{
+                font-family:Arial, sans-serif;
+                background: lightblue;
+                display: flex;
+                justify-content: center;
+                
+            }
+            .container{
+                background: white;
+                padding: 10px;
+                width: 400px;
+                border-radius: 10px;
+
+            }
+            
+            input, textarea{
+                padding: 8px;
+                width: 90%;
+            }
+            input[type="radio"]{
+                width: auto;
+            }
+            button {
+                padding: 10px;
+                width: 50%;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <h2 align="center">Student Info Form</h2>
+            <label>Name: </label>
+            <input type="text" id="name">
+            <br><br>
+
+            <label>Email: </label>
+            <input type="text" id="email">
+            <br><br>
+
+            <label>Mobile No.</label>
+            <input type="text" id="mobile">
+
+            <label>Gender</label>
+            <br>
+            <input type="radio" name="gender" value="male">Male
+            <input type="radio" name="gender" value="female">Female
+
+            <br><br>
+
+            <label>Favorite Color: </label>
+            <input type="color" id="color">
+            <br><br>
+
+            <button onclick="validateAndDisplay()">Submit</button>
+            <br><br>
+            <textarea id="output" rows="6" readonly placeholder="Your info will be displayed here!"></textarea>
+        </div>
+
+        <script>
+            function validateAndDisplay() {
+
+                let name= document.getElementById("name").value
+                let email= document.getElementById("email").value
+                let mobile= document.getElementById("mobile").value
+                let color= document.getElementById("color").value;
+
+                let gender=""
+                let genders= document.getElementsByName("gender");           // by name!!
+
+                for(let i=0; i<genders.length; i++){
+                    if(genders[i].checked) {
+                        gender= genders[i].value;
+                    }
+                }
+
+                if(name=="" || email=="" || mobile=="" || gender==""){
+                    alert("Please fill all details!");
+                    return;
+                }
+
+                let info= "Name: "+name+ "\nEmail: "+ email+ 
+                          "\nMobile: "+ mobile+ "\nGender: "+gender+
+                          "\nFavorite Color: "+ color;
+
+                          document.getElementById("output").value=info;                        //   .value=info
+            }
+        </script>
+    </body>
+</html>
